@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+
+  </head>
+  <h1> {{pasirinkimo_pavadinimas}}
+    </h1>
+    <div class="ct-chart ct-perfect-fourth"></div>
+    <script> var data = {
+      // Axis x - Year
+      labels: ['2015', '2016', '2017', '2018','2019', '2020'],
+
+      // axis y - Data
+      series: [
+        {{duomenys}}
+      ]
+    };
+
+
+
+    new Chartist.Line('.ct-chart', data);
+    </script>
+</html>
