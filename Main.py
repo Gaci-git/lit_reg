@@ -29,7 +29,7 @@ def download_from_internet(source_file, output_file):
 #           output_list: LIST element
 def read_csv_file_and_save_data(csv_file):
     output_list = []
-    with open(csv_file) as csv_file_read:
+    with open(csv_file, encoding='utf-8') as csv_file_read:
         data = csv.reader(csv_file_read)
         for row in data:
 
@@ -51,7 +51,7 @@ def read_csv_file_and_save_data(csv_file):
 #           total_lt[0]: LIST Element
 def read_csv_file_and_save_total_lt_data(csv_file):
     total_lt = []
-    with open(csv_file) as csv_file_read:
+    with open(csv_file, encoding='utf-8') as csv_file_read:
         for row in reversed(list(csv.reader(csv_file_read))):
             total_lt.append(row)
     return total_lt[0]
